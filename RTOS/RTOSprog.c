@@ -21,6 +21,7 @@ u8 createTask(u8 Copy_u8FirstDelay, u8 Copy_u8Periodicty , u8 Copy_u8Priority, v
 {
     RTOSTask Local_Task = {Copy_u8Periodicty, TaskCode , Copy_u8FirstDelay};
     Global_TaskArray[Copy_u8Priority] = Local_Task;
+
 }
 
 u8 startSchedular(void)

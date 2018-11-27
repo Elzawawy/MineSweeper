@@ -13,7 +13,7 @@ typedef enum MotorDriver_enuState
 	MotorDriver_enuNormalState = 0,
 } MotorDriver_enuState;
 
-void MotorDriver_voidInit();
+void MotorDriver_voidInit(void);
 u8 MotorDriver_u8MoveForward(void);
 u8 MotorDriver_u8MoveBackward(void);
 u8 MotorDriver_u8RotateRight(void);

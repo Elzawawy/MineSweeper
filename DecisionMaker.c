@@ -8,7 +8,7 @@
 #include "libs/STD_TYPES.h"
 #include "utils/BIT_LIB.h"
 #include "DecisionMaker.h"
-#include "MOTOR_DRIVER_DRIVER/MOTORDRIVER_INT.h"
+#include "MotorDriver_driver/MotorDriver_int.h"
 
 #define LOW 0
 #define HIGH 1
@@ -49,26 +49,24 @@ u8 MakeMotorDecision(u8 Copy_u8MetalDetectorVal)
     
     if(Copy_u8MetalDetectorVal == HIGH)
     {
-        STOP();
+        MotorDriver_u8StopMotor();
     }
     else 
     {
         switch(Global_DecisionMode)
         {
             case UltraSonicNormal:
-                MOTORDRIVER_MOVE_FORWARD();
+                MotorDriver_u8MoveForward();
                 break;
             case UltraSonicRotateLeft:
-            	MOTORDRIVER_ROTATE_LEFT();
+            	MotorDriver_u8RotateLeft();
                 break;
             case UltraSonicRotateRight :
-            	MOTORDRIVER_ROTATE_RIGHT();
+            	MotorDriver_u8RotateRight();
                 break;
             case UltraSonicCrash :
-                MOTORDRIVER_MOVE_BACKWARD();
+                MotorDriver_u8MoveBackward();
                 break;
-            //default:
-                //wrong mode enetered.
         }
     }
 }

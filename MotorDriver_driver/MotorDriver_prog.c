@@ -10,7 +10,7 @@
 #include "MotorDriver_config.h"
 #include "MotorDriver_private.h"
 
-void MOTORDRIVER_INIT()
+void MotorDriver_voidInit(void)
 {
 	//setting direction of Motor1 DIO pins
 	DIO_u8SetPinDir(IN1_INITPIN, OUTPUT);
@@ -31,7 +31,7 @@ void MOTORDRIVER_INIT()
 	DIO_u8SetPinValue(IN4_INITPIN, IN4_INITVAL);
 	DIO_u8SetPinValue(EN2_INITPIN, EN2_INITVAL);
 }
-u8 MOTORDRIVER_MOVE_FORWARD()
+u8 MotorDriver_u8MoveForward(void)
 {
 	//MOVE MOTOR1 forward
 	DIO_u8SetPinValue(IN1_INITPIN, HIGH);
@@ -44,7 +44,7 @@ u8 MOTORDRIVER_MOVE_FORWARD()
 	DIO_u8SetPinValue(EN2_INITPIN, HIGH);
 }
 
-u8 MOTORDRIVER_ROTATE_RIGHT()
+u8 MotorDriver_u8RotateRight(void)
 {
 	//MOVE MOTOR1 forward
 	DIO_u8SetPinValue(IN1_INITPIN, HIGH);
@@ -56,7 +56,7 @@ u8 MOTORDRIVER_ROTATE_RIGHT()
 	DIO_u8SetPinValue(IN4_INITPIN, HIGH);
 	DIO_u8SetPinValue(EN2_INITPIN, HIGH);
 }
-u8 MOTORDRIVER_ROTATE_LEFT()
+u8 MotorDriver_u8RotateLeft(void)
 {
 	//MOVE MOTOR1 backward
 	DIO_u8SetPinValue(IN1_INITPIN, LOW);
@@ -68,7 +68,7 @@ u8 MOTORDRIVER_ROTATE_LEFT()
 	DIO_u8SetPinValue(EN2_INITPIN, HIGH);
 }
 
-u8 MOTORDRIVER_MOVE_BACKWARD()
+u8 MotorDriver_u8MoveBackward(void)
 {
 	//MOVE MOTOR1 backward
 	DIO_u8SetPinValue(IN1_INITPIN, LOW);
@@ -81,7 +81,7 @@ u8 MOTORDRIVER_MOVE_BACKWARD()
 	DIO_u8SetPinValue(EN2_INITPIN, HIGH);
 }
 
-u8 STOP()
+u8 MotorDriver_u8StopMotor()
 {
 	//STOP MOTOR1
 	DIO_u8SetPinValue(IN1_INITPIN, LOW);

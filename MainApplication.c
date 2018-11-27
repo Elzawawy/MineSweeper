@@ -15,8 +15,7 @@
 #include "utils/BIT_LIB.h"
 #include "avr/delay.h"
 #define F_CPU 12000000
-#include "TIMER1_DRIVER/TIMER1_INT.h"
-#include "TIMER1_DRIVER/TIMER1_CONFIG.h"
+#include "Timer1_driver/Timer1_int.h"
 #include "Extint_driver/Extint_int.h"
 #include "DIO_driver/DIO_int.h"
 
@@ -109,7 +108,7 @@ void main(void){
 	DIO_u8SetPinDir(DIO_enuPin8,DIO_u8PIN_OUTPUTDIR);
 	DIO_u8SetPinDir(DIO_enuPin9,DIO_u8PIN_OUTPUTDIR);
 	DIO_u8SetPinDir(DIO_enuPin12,DIO_u8PIN_OUTPUTDIR);
-	TIMER1_INITALIZE();
+	Timer1_voidInit();
 	Extint_voidInit();
 	Extint_u8SetIntHanlder(Extint_enuInt0,UltraSonic_Front_INT0);
 	Extint_u8EnableInt(Extint_enuInt0);
@@ -122,15 +121,6 @@ void main(void){
 		TRIG1();
 		TRIG2();
 		TRIG3();
-		LCD_Write_Var ((VALFRONT*8)/(12*58),3);
-		LCD_Write_Data(' ');
-		LCD_Write_Var ((VALRIGHT*8)/(12*58),3);
-		LCD_Write_Data(' ');
-		LCD_Write_Var ((VALLEFT*8)/(12*58),3);
-		LCD_Write_Data(' ');
-
-		_delay_ms(60);
-		LCD_Write_Cmd(1);
 	}
 }
 

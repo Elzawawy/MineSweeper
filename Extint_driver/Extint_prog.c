@@ -5,8 +5,8 @@
  *      Author: Omar Hosny & Amr Elzawawy
  */
 
-#include "libs/STD_TYPES.h"
-#include "utils/BIT_LIB.h"
+#include "../libs/STD_TYPES.h"
+#include "../utils/BIT_LIB.h"
 #include "Extint_int.h"
 #include "Extint_private.h"
 #include "Extint_config.h"

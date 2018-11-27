@@ -57,13 +57,17 @@ u8 MakeMotorDecision(u8 Copy_u8MetalDetectorVal)
         {
             case UltraSonicNormal:
                 MOTORDRIVER_MOVE_FORWARD();
+                break;
             case UltraSonicRotateLeft:
-                MOTORDRIVER_ROTATE_LEFT();
+            	MOTORDRIVER_ROTATE_LEFT();
+                break;
             case UltraSonicRotateRight :
-                MOTORDRIVER_ROTATE_RIGHT();
+            	MOTORDRIVER_ROTATE_RIGHT();
+                break;
             case UltraSonicCrash :
                 MOTORDRIVER_MOVE_BACKWARD();
-            default :
+                break;
+            //default:
                 //wrong mode enetered.
         }
     }

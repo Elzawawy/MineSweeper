@@ -12,6 +12,9 @@
 #define GET_BIT(byte,bit_no) ((byte>>bit_no)& 1)
 #define TOGGLE_BIT(byte,bit_no) (byte ^= (1<<bit_no))
 #define ASSIGN_BIT(byte,bit_no,value)	byte = (byte & (~(1<<bit_no)))|(value<<bit_no)
+#define ClearPort(number) number=(number &(0b00000000))
+#define SetPort(number) number=(number |(0b11111111))
+#define TogglePort(number) number=(number ^(0b11111111))
 #define concByteHelper(x7,x6,x5,x4,x3,x2,x1,x0) 0b##x7##x6##x5##x4##x3##x2##x1##x0
 #define concByte(x7,x6,x5,x4,x3,x2,x1,x0) concByteHelper(x0,x1,x2,x3,x4,x5,x6,x7)
 

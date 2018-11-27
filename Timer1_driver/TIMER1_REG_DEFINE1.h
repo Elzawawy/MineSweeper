@@ -15,10 +15,13 @@
 #define TCNT1      *((u16*)0X4C)
 #define OCR1AH     *((u8*)0X4B)
 #define OCR1AL     *((u8*)0X4A)
+#define OCR1A      *((u16*)0x4A)
 #define OCR1BH     *((u8*)0X49)
 #define OCR1BL     *((u8*)0X48)
+#define OCR1B      *((u16*)0x48)
 #define ICR1H      *((u8*)0X47)
 #define ICR1L      *((u8*)0X46)
+#define ICR1       *((u16*0x46))
 
 
 

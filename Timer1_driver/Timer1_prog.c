@@ -6,7 +6,7 @@
  */
 #include "../libs/STD_TYPES.h"
 #include "../utils/BIT_LIB.h"
-#include "TIMER1_REG_DEFINE1.h"
+#include "../libs/Registers.h"
 #include "Timer1_int.h"
 #include "Timer1_config.h"
 #include "Timer1_private.h"

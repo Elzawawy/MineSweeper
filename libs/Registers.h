@@ -30,9 +30,8 @@
 #define  OCR0	(*(volatile u8 *) 0x5C )
 #define  TIMSK	(*(volatile u8 *) 0x59 )
 #define  TIFR	(*(volatile u8 *) 0x58 )
-//#define  SREG   (*(volatile u8 *) 0x5F )
 
-//TIMER0_Registers
+//TIMER1_Registers
 #define TCCR1A     *((u8*)0X4F)
 #define TCCR1B     *((u8*)0X4E)
 #define TCNT1H     *((u8*)0X4D)

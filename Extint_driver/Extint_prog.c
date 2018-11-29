@@ -6,6 +6,7 @@
  */
 
 #include "../libs/STD_TYPES.h"
+#include "../libs/Registers.h"
 #include "../utils/BIT_LIB.h"
 #include "Extint_int.h"
 #include "Extint_private.h"

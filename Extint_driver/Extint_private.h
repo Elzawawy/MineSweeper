@@ -12,13 +12,6 @@
 #define HIGH 1
 #define LOW 0
 
-/*************** Registers Addresses Definition *****************/
-#define SREG *((volatile u8*) 0x5F)
-#define GICR *((volatile u8*) 0x5B)
-#define GIFR *((volatile u8*) 0x5A)
-#define MCUCR *((volatile u8*) 0x55)
-#define MCUCSR *((volatile u8*) 0x54)
-
 /*************** ISR *********************/
 #define ISR(__vector_num)                                                      \
     void __vector_num(void) __attribute__((signal, used, externally_visible)); \

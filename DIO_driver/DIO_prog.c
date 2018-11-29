@@ -4,8 +4,10 @@
  *  Created on: 13 September, 2018
  *      Author: Amr Elzawawy
  */
-#include "libs/STD_TYPES.h"
-#include "utils/BIT_LIB.h"
+#include "../libs/STD_TYPES.h"
+#include "../libs/Registers.h"
+#include "../utils/BIT_LIB.h"
+#include "DIO_config.h"
 #include "DIO_private.h"
 #include "DIO_int.h"
 

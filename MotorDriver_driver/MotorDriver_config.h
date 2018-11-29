@@ -16,7 +16,10 @@
  * IN4 ---> Motor2 Opposite Direction.
  * EN1 ---> DC Motor1 Enable.
  * EN2 ---> DC Motor2 Enable.
- * /
+ *
+***************** Range of Initial Pin Values ****************
+    ( min : DIO_enuPin0 ------->  max : DIO_enuPin31 )
+*/
 
 /* IN1 Pin.
  * IN1_INITPIN is the DIO Pin connected with MotorDriver N1 Pin

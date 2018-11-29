@@ -4,6 +4,8 @@
  *  Created on: Oct 13, 2018
  *      Author: zawawy
  */
+#include "../libs/STD_TYPES.h"
+#include "../Timer0_driver/Timer0_int.h"
 #include "RTOS.h"
 #include "RTOSconfig.h"
 #include "RTOSprivate.h"

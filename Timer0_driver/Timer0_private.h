@@ -5,18 +5,11 @@
  *      Author: Amr Elzawawy
  */
 
+#ifndef TIMER0_PRIVATE_H_
+#define TIMER0_PRIVATE_H_
 #define HIGH 1
 #define LOW 0
 #define NULL ( void * )0x00
-/*************** Registers Addresses Definition *****************/
-
-#define  TCCR0 	(*(volatile u8 *) 0x53 )
-#define  TCNT0 	(*(volatile u8 *) 0x52 )
-#define  OCR0	(*(volatile u8 *) 0x5C )
-#define  TIMSK	(*(volatile u8 *) 0x59 )
-#define  TIFR	(*(volatile u8 *) 0x58 )
-#define  SREG   (*(volatile u8 *) 0x5F )
-
 /*************** Registers Bits Definition *****************/
 /* Timer/Counter0 Control Register – TCCR0 */
 #define FOC0 7
@@ -49,5 +42,6 @@
 
 void (* voidPtrToOVISR) (void) = NULL;
 void (* voidPtrToCMISR) (void) = NULL;
+#endif
 
 

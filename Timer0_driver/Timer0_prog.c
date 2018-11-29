@@ -5,6 +5,7 @@
  *      Author: Amr Elzawawy
  */
 #include "../libs/STD_TYPES.h"
+#include "../libs/Registers.h"
 #include "../utils/BIT_LIB.h"
 #include "Timer0_int.h"
 #include "Timer0_config.h"

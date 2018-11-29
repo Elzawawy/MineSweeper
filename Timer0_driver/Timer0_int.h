@@ -4,6 +4,9 @@
  *  Created on: 26 September, 2018
  *      Author: Amr Elzawawy
  */
+#ifndef TIMER0_INT_H_
+#define TIMER0_INT_H_
+
 typedef enum  Timer0_enuState {
     Timer0_enuNormalState =0,
     Timer0_enuInvalidOperationMode,
@@ -29,3 +32,4 @@ u8 Timer0_u8EnableOverflowInt(void);
 u8 Timer0_u8EnableCompareMatchInt(void);
 u8 Timer0_u8SetOverflowInt(void (* voidPtrToFunc)(void));
 u8 Timer0_u8SetCompareMatchInt(void (* voidPtrToFunc) (void));
+#endif

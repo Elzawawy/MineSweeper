@@ -42,6 +42,7 @@ u8 MotorDriver_u8MoveForward(void)
 	DIO_u8SetPinValue(IN3_INITPIN, HIGH);
 	DIO_u8SetPinValue(IN4_INITPIN, LOW);
 	DIO_u8SetPinValue(EN2_INITPIN, HIGH);
+	return MotorDriver_enuNormalState;
 }
 
 u8 MotorDriver_u8RotateRight(void)
@@ -55,6 +56,7 @@ u8 MotorDriver_u8RotateRight(void)
 	DIO_u8SetPinValue(IN3_INITPIN, LOW);
 	DIO_u8SetPinValue(IN4_INITPIN, HIGH);
 	DIO_u8SetPinValue(EN2_INITPIN, HIGH);
+	return MotorDriver_enuNormalState;
 }
 u8 MotorDriver_u8RotateLeft(void)
 {
@@ -66,6 +68,7 @@ u8 MotorDriver_u8RotateLeft(void)
 	DIO_u8SetPinValue(IN3_INITPIN, HIGH);
 	DIO_u8SetPinValue(IN4_INITPIN, LOW);
 	DIO_u8SetPinValue(EN2_INITPIN, HIGH);
+	return MotorDriver_enuNormalState;
 }
 
 u8 MotorDriver_u8MoveBackward(void)
@@ -79,6 +82,7 @@ u8 MotorDriver_u8MoveBackward(void)
 	DIO_u8SetPinValue(IN3_INITPIN, LOW);
 	DIO_u8SetPinValue(IN4_INITPIN, HIGH);
 	DIO_u8SetPinValue(EN2_INITPIN, HIGH);
+	return MotorDriver_enuNormalState;
 }
 
 u8 MotorDriver_u8StopMotor()
@@ -92,4 +96,5 @@ u8 MotorDriver_u8StopMotor()
 	DIO_u8SetPinValue(IN3_INITPIN, LOW);
 	DIO_u8SetPinValue(IN4_INITPIN, LOW);
 	DIO_u8SetPinValue(EN2_INITPIN, LOW);
+	return MotorDriver_enuNormalState;
 }

@@ -5,6 +5,9 @@
  *      Author: Amr Elzawawy
  */
 
+#ifndef TIMER0_CONFIG_H_
+#define TIMER0_CONFIG_H_
+
 /* Timer/Counter0 Control Register – TCCR0 
 -------------------------------------------
 Bit 6, 3 – WGM01:0: Waveform Generation Mode
@@ -63,18 +66,20 @@ CS02 CS01 CS00 	Description
 
 RANGE : ( HIGH_VAL "1" or LOW_VAL "0")
 */
-#define CS02_VAL 1
-#define CS01_VAL 0
-#define CS00_VAL 1
+#define CS02_VAL 0
+#define CS01_VAL 1
+#define CS00_VAL 0
 
 /*Timer/Counter Interrupt Mask Register – TIMSK
 --------------------------------------------------
-/* Bit 1 – OCIE0: Timer/Counter0 Output Compare Match Interrupt Enable 
+Bit 1 – OCIE0: Timer/Counter0 Output Compare Match Interrupt Enable
 RANGE : ( HIGH_VAL "1" or LOW_VAL "0") */
 #define OCIE0_VAL 0
 /* Bit 0 – TOIE0: Timer/Counter0 Overflow Interrupt Enable 
 RANGE : ( HIGH_VAL "1" or LOW_VAL "0") */
 #define TOIE0_VAL 0
+
+#endif
 
 
 

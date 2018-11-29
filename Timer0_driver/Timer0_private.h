@@ -7,6 +7,7 @@
 
 #ifndef TIMER0_PRIVATE_H_
 #define TIMER0_PRIVATE_H_
+
 #define HIGH 1
 #define LOW 0
 #define NULL ( void * )0x00

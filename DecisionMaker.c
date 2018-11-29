@@ -23,7 +23,7 @@ typedef enum UltraSonicDecisionMode{
 UltraSonicDecisionMode Global_DecisionMode;
 
 //Make Decision based on ultrasonic readings collected as input.
-u8 MakeUltraSonicDecision(u8 Copy_u8FrontUltraSonicVal, u8 Copy_u8RightUltraSonicVal, u8 Copy_u8LeftUltraSonicVal)
+void MakeUltraSonicDecision(u8 Copy_u8FrontUltraSonicVal, u8 Copy_u8RightUltraSonicVal, u8 Copy_u8LeftUltraSonicVal)
 {
     //If Front Value is less than the minimum allowed distance. Danger !
     if( Copy_u8FrontUltraSonicVal < GUARD_BAND_DISTANCE)
@@ -44,7 +44,7 @@ u8 MakeUltraSonicDecision(u8 Copy_u8FrontUltraSonicVal, u8 Copy_u8RightUltraSoni
 }
 
 //Make Decision to Motor based on ultrasonic readings and metal detector value collected.
-u8 MakeMotorDecision(u8 Copy_u8MetalDetectorVal)
+void MakeMotorDecision(u8 Copy_u8MetalDetectorVal)
 {
     
     if(Copy_u8MetalDetectorVal == HIGH)

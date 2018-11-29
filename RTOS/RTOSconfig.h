@@ -8,5 +8,5 @@
 #define RTOS_CONFIG_H_
 
 #define NUM_TASKS 4
-#define TCNT_value 218
+#define TCNT_value 165
 #endif

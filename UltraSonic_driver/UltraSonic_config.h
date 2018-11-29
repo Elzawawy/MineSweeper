@@ -14,9 +14,13 @@
 #define UltarSonic_Devices 3
 #define OscillatorFreqInMHz 12
 #define Timer1Prescaler 8
-#define UltraSonic_Device1TriggerPin DIO_enuPin8
-#define UltraSonic_Device2TriggerPin DIO_enuPin9
-#define UltraSonic_Device3TriggerPin DIO_enuPin12
+typedef enum {
+	UltraSonic_Device1TriggerPin=DIO_enuPin29,
+	UltraSonic_Device2TriggerPin=DIO_enuPin30,
+	UltraSonic_Device3TriggerPin=DIO_enuPin31
+}UltraSonic_DeviceNumTriggerPin;
+
+
 
 
 

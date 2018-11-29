@@ -11,25 +11,26 @@
 #include "RTOSprivate.h"
 typedef struct
 {
-	u8 periodicty;
+	u16 periodicty;
 	void (*ptrToFunc)(void);
-	u8 firstDelay;
+	u16 firstDelay;
 }RTOSTask;
 
 RTOSTask Global_TaskArray[NUM_TASKS];
 void TimerOverFlowISR(void);
 
-u8 createTask(u8 Copy_u8FirstDelay, u8 Copy_u8Periodicty , u8 Copy_u8Priority, void (*TaskCode)(void))
+void createTask(u16 Copy_u8FirstDelay, u16 Copy_u8Periodicty , u16 Copy_u8Priority, void (*TaskCode)(void))
 {
     RTOSTask Local_Task = {Copy_u8Periodicty, TaskCode , Copy_u8FirstDelay};
     Global_TaskArray[Copy_u8Priority] = Local_Task;
 
 }
 
-u8 startSchedular(void)
+void startSchedular(void)
 {
 	Timer0_voidInit();
 	Timer0_u8SetOverflowInt(TimerOverFlowISR);
+	Timer0_u8SetTCNT(TCNT_value);
 	Timer0_u8EnableOverflowInt();
 }
 

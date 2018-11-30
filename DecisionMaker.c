@@ -20,22 +20,22 @@ typedef enum UltraSonicDecisionMode{
     UltraSonicCrash
 }UltraSonicDecisionMode;
 //Global Variable to be shared among file methods "File Scope"
-UltraSonicDecisionMode Global_DecisionMode;
+UltraSonicDecisionMode Global_DecisionMode =UltraSonicNormal;
 
 //Make Decision based on ultrasonic readings collected as input.
-void MakeUltraSonicDecision(u8 Copy_u8FrontUltraSonicVal, u8 Copy_u8RightUltraSonicVal, u8 Copy_u8LeftUltraSonicVal)
+void MakeUltraSonicDecision(u16 Copy_u16FrontUltraSonicVal, u16 Copy_u16RightUltraSonicVal, u16 Copy_u16LeftUltraSonicVal)
 {
     //If Front Value is less than the minimum allowed distance. Danger !
-    if( Copy_u8FrontUltraSonicVal < GUARD_BAND_DISTANCE)
+    if( Copy_u16FrontUltraSonicVal < GUARD_BAND_DISTANCE )
     {
         //Check My Right.
-        if( Copy_u8RightUltraSonicVal >= GUARD_BAND_DISTANCE)
+        if( Copy_u16RightUltraSonicVal >= GUARD_BAND_DISTANCE && Copy_u16RightUltraSonicVal < ERROR_BAND_DISTANCE)
             Global_DecisionMode = UltraSonicRotateRight;
         //Check My Left.
-        else if (Copy_u8LeftUltraSonicVal >= GUARD_BAND_DISTANCE)
+        else if (Copy_u16LeftUltraSonicVal >= GUARD_BAND_DISTANCE && Copy_u16RightUltraSonicVal < ERROR_BAND_DISTANCE)
             Global_DecisionMode = UltraSonicRotateLeft;
         //Oops ! Gotta go back !
-        else 
+        else
             Global_DecisionMode = UltraSonicCrash;
     }
     //It's Okay ! 

@@ -11,7 +11,7 @@
 #include "Timer1_config.h"
 #include "Timer1_private.h"
 
-void Timer1_voidInit()
+void Timer1_voidInit(void)
 {
 	ASSIGN_BIT(TCCR1A,WGM10,WGM10_VAL);
 	ASSIGN_BIT(TCCR1A,WGM11,WGM11_VAL);

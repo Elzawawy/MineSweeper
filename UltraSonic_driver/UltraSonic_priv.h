@@ -17,7 +17,7 @@
 typedef struct {
 	void (*fptr)(void);
 	Extint_enuIntNum Int_num;
-	u8 Val;
+	u16 Val;
 	UltraSonic_DeviceNumTriggerPin Trigger;
 }tstrdevicecreator;
 

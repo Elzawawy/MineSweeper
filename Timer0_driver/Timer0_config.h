@@ -68,7 +68,7 @@ RANGE : ( HIGH_VAL "1" or LOW_VAL "0")
 */
 #define CS02_VAL 0
 #define CS01_VAL 1
-#define CS00_VAL 0
+#define CS00_VAL 1
 
 /*Timer/Counter Interrupt Mask Register – TIMSK
 --------------------------------------------------

@@ -28,7 +28,7 @@ typedef enum {
 
 void UltraSonic_voidInit(void);
 u8 UltraSonic_u8Trigger(u8 Copy_u8UltraSonicNum);
-u8 UltraSonic_u8GetVal(u8 Copy_u8UltraSonicNum,u8 *Copy_u8UltraSonicVal,u8 Copy_u8Unit);
+u8 UltraSonic_u8GetVal(u8 Copy_u8UltraSonicNum,u16 *Copy_u16UltraSonicVal,u8 Copy_u8Unit);
 
 
 #endif /* ULTRASONIC_DRIVER_ULTRASONIC_INT_H_ */

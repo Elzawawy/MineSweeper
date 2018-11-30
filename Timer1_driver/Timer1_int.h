@@ -27,7 +27,7 @@ typedef enum Timer1_enuRegister
 	Timer1_enuICR
 }Timer1_enuRegister;
 
-void Timer1_voidInit();
+void Timer1_voidInit(void);
 u8 Timer1_u8setTCNT1(u16 Copy_u16TCNT1Val);
 u8 Timer1_u8getTCNT1(u16*u16_ptrtoVal);
 

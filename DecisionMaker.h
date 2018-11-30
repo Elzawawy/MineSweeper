@@ -14,9 +14,10 @@ typedef enum enuDecisionMakerState
 }enuDecisionMakerState;
 
 //Minimum Distance "Guard Band" to avoid crash.
-#define GUARD_BAND_DISTANCE 8
+#define GUARD_BAND_DISTANCE 20
+#define ERROR_BAND_DISTANCE 122
 //Make Decision based on ultrasonic readings collected as input.
-void MakeUltraSonicDecision(u8 Copy_u8FrontUltraSonicVal, u8 Copy_u8RightUltraSonicVal, u8 Copy_u8LeftUltraSonicVal);
+void MakeUltraSonicDecision(u16 Copy_u16FrontUltraSonicVal, u16 Copy_u16RightUltraSonicVal, u16 Copy_u16LeftUltraSonicVal);
 //Make Decision to Motor based on ultrasonic readings and metal detector value collected.
 void MakeMotorDecision(u8 Copy_u8MetalDetectorVal);
 

@@ -7,6 +7,6 @@
 #ifndef RTOS_CONFIG_H_
 #define RTOS_CONFIG_H_
 
-#define NUM_TASKS 4
-#define TCNT_value 165
+#define NUM_TASKS 5
+#define TCNT_value 236
 #endif

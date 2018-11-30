@@ -101,20 +101,20 @@ u8 Extint_u8SetIntState(u8 Copy_u8IntNum, u8 Copy_u8IntState)
         switch (Copy_u8IntState)
         {
         case (Extint_enuFallingEdge):
-            //Disable Interrupt.
-            RESET_BIT(GICR,INT2);
+//            //Disable Interrupt.
+//            RESET_BIT(GICR,INT2);
             //Change State.
             RESET_BIT(MCUCSR, ISC2);
-            //Clear Flag.
-            SET_BIT(GIFR,INTF2);
-            //Re-Enable Interrupt.
-            SET_BIT(GICR,INT2);
+//            //Clear Flag.
+//            SET_BIT(GIFR,INTF2);
+//            //Re-Enable Interrupt.
+//            SET_BIT(GICR,INT2);
             break;
         case (Extint_enuRisingEdge):
-            RESET_BIT(GICR,INT2);
+//            RESET_BIT(GICR,INT2);
             SET_BIT(MCUCSR, ISC2);
-            SET_BIT(GIFR,INTF2);
-            SET_BIT(GICR,INT2);
+//            SET_BIT(GIFR,INTF2);
+//            SET_BIT(GICR,INT2);
             break;
         default:
             Local_ExtintState = Extint_enuWrongIntState;

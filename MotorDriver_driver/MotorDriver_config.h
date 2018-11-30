@@ -24,38 +24,38 @@
 /* IN1 Pin.
  * IN1_INITPIN is the DIO Pin connected with MotorDriver N1 Pin
  * IN1_INITVAL is the initial value for this direction. */
-#define IN1_INITPIN  DIO_enuPin0
-#define IN1_INITVAL  ENABLE
+#define IN1_INITPIN  DIO_enuPin1
+#define IN1_INITVAL  DISABLE
 
 /* IN2 Pin.
  * IN2_INITPIN is the DIO Pin connected with MotorDriver N2 Pin 
  * IN2_INITVAL is the initial value for this direction. */
-#define IN2_INITPIN  DIO_enuPin1
+#define IN2_INITPIN  DIO_enuPin2
 #define IN2_INITVAL  DISABLE
 
 /* IN3 Pin.
  * IN3_INITPIN is the DIO Pin connected with MotorDriver N3 Pin 
  * IN3_INITVAL is the initial value for this direction. */
-#define IN3_INITPIN  DIO_enuPin2
-#define IN3_INITVAL  ENABLE
+#define IN3_INITPIN  DIO_enuPin5
+#define IN3_INITVAL  DISABLE
 
 /* IN4 Pin.
  * IN4_INITPIN is the DIO Pin connected with MotorDriver N4 Pin 
  * IN4_INITVAL is the initial value for this direction. */
-#define IN4_INITPIN  DIO_enuPin3
+#define IN4_INITPIN  DIO_enuPin4
 #define IN4_INITVAL  DISABLE
 
 /* EN1 Pin.
  * EN1_INITPIN is the DIO Pin connected with MotorDriver EN1 Pin 
  * EN1_INITVAL is the initial value for this direction. */
-#define EN1_INITPIN  DIO_enuPin4
-#define EN1_INITVAL  DISABLE
+#define EN1_INITPIN  DIO_enuPin0
+#define EN1_INITVAL  ENABLE
 
 /* EN2 Pin.
  * EN2_INITPIN is the DIO Pin connected with MotorDriver EN1 Pin 
  * EN2_INITVAL is the initial value for this direction. */
-#define EN2_INITPIN  DIO_enuPin5
-#define EN2_INITVAL  DISABLE
+#define EN2_INITPIN  DIO_enuPin3
+#define EN2_INITVAL  ENABLE
 
 //Leave this in place when using a stepper motor. Connect to PWM output for DC motor speed control.
 
